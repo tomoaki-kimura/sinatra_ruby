@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/custom.css">
+    <title>時間割</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th><a href="<%= "/show?week=" + @week %>"><%= @week %></a></th>
+          <th>編集</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+        </tr>
+        <% @datas.each.with_index(1) do |data, count| %>
+          <tr>
+            <th><%= count %>時間目</th>
+            <td><%= data %></td>
+            <td><a href="<%= "/edit?week=" + @week + "&count=" + count.to_s %>">この時間の編集</a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <a href="/">戻る</a>
+  </body>
+</html>

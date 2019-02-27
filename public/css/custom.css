@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+table {
+    border: solid 1.5px #000000;
+    table-layout: fixed;
+    width: 400px;
+}
+
+td {
+    border: solid 1px #000000;
+    text-align: center;
+}
+
+th {
+    border: solid 1.5px #000000;
+}

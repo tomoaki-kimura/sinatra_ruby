@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/custom.css">
+    <title>時間割</title>
+  </head>
+  <body>
+    <form method="post" action="/update">
+      <input type="hidden" name="week" value="<%= @week %>">
+      <input type="hidden" name="count" value="<%= @count %>">
+      <select name="class">
+        <option value="<%= @class %>"><%= @class %></option>
+        <% @classes.each do |clas| %>
+          <option value="<%= clas %>"><%= clas %></option>
+        <% end %>
+      </select>
+
+      <input type="submit" value="変更する">
+
+    </form>
+    <a href="<%= "/edit?week=" + @week %>"><%= @week %>へ戻る</a>
+  </body>
+</html>

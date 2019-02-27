@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/custom.css">
+    <title>時間割</title>
+  </head>
+  <body>
+    <h1>時間割アプリ</h1>
+    <h3>時間割を表示したい曜日を選択して表示ボタンを押して下さい。</h3>
+    <form method="get" action="/show">
+      <select name="week">
+        <% @weeks.each do |week| %>
+          <option value="<%= week %>"><%= week %></option>
+        <% end %>
+      </select>
+      <p><input type="submit" value="表示する"></p>
+    </form>
+  </body>
+</html>
